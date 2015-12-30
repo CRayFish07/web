@@ -342,6 +342,7 @@ public class FormModelMethodArgumentResolver implements HandlerMethodArgumentRes
         if(multipartRequest != null) {
             MockMultipartHttpServletRequest mockMultipartRequest = new MockMultipartHttpServletRequest();
             mockMultipartRequest.getMultiFileMap().putAll(multipartRequest.getMultiFileMap());
+            mockRequest = mockMultipartRequest;
         } else {
             mockRequest = new MockHttpServletRequest();
         }
